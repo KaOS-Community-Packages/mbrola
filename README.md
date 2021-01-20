@@ -32,13 +32,14 @@ You can test the newly installed voice using espeak
 espeak -v mb-us1 "Hello world"
 ```
 
-## Using MBROLA voices with okular
+## Using MBROLA voices with Okular
 To do so, you need to install espeak
 ```
 sudo pacman -Su espeak
 ```
 and set the appropriate files of speech-dispatcher.
-1. Open the file '.config/speech-dispatcher/modules/espeak-ng-mbrola-generic.conf'
+
+1. *Open the file* '.config/speech-dispatcher/modules/espeak-ng-mbrola-generic.conf'
 ```
 kate .config/speech-dispatcher/modules/espeak-ng-mbrola-generic.conf
 ```
@@ -48,7 +49,8 @@ GenericExecuteSynth \
 "printf %s \'$DATA\' | espeak-ng -v mb-$VOICE -s $RATE -p $PITCH $PUNCT -stdin"
 ```
 then save.
-2. Open the file `.config/speech-dispatcher/speechd.conf`
+
+2. *Open the file* `.config/speech-dispatcher/speechd.conf`
 ```
 kate .config/speech-dispatcher/speechd.conf
 ```
@@ -64,7 +66,8 @@ to
 ```
 DefaultModule   espeak-ng-mbrola-generic
 ```
-3. Restart Okular. Now the TTS function of Ocular uses the MBROLA voices. Please note that whenever a voice is missing, the output is mute. Install the appropriate languages; to check the output you can compare the default
+
+3. *Restart Okular.* Now the TTS function of Ocular uses the MBROLA voices. Please note that whenever a voice is missing, the output is mute. Install the appropriate languages; to check the output you can compare the default
 ```
 spd-say -l en "Hello"
 ```
