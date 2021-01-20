@@ -75,4 +75,4 @@ with the explicit call to MBROLA
 ```
 espeak-ng -vmb-en1 "Hello"
 ```
-Omitting the option `-l en` will select your system default language; be shure to have the corresponding MBROLA voice.
+Omitting the option `-l en` will select your system default language; be sure to have the corresponding MBROLA voice.
