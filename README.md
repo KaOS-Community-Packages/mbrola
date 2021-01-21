@@ -4,7 +4,7 @@ This package installs the mbrola synthesizer and the british english voice en1 (
 kcp -u
 kcp -i mobrola
 ```
-You can test the installation by using an example *.pho* file like [this](https://raw.githubusercontent.com/numediart/MBROLA-voices/master/data/en1/TEST/euler.pho). Then, you can here it by running
+You can test the installation by using an example *.pho* file like [this](https://raw.githubusercontent.com/numediart/MBROLA-voices/master/data/en1/TEST/euler.pho). Then, you can listen to it by running
 ```
 mbrola /usr/share/mbrola/en1/en1 euler.pho -.au | paplay
 ```
