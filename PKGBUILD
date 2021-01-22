@@ -20,8 +20,6 @@ build() {
 }
 
 package() {
+    install -Dm 755 "en1?raw=true" "${pkgdir}/usr/share/mbrola/en1/en1"
     install -Dm 755 "${src_name}/Bin/mbrola" "${pkgdir}/usr/bin/mbrola"
-    sudo mkdir -p /usr/share/mbrola/en1
-    mv "en1?raw=true" "en1"
-    sudo cp "en1" /usr/share/mbrola/en1/en1
 }
