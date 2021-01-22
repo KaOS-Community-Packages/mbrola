@@ -1,6 +1,6 @@
 pkgname=mbrola
 pkgver=3.3
-pkgrel=1
+pkgrel=2
 pkgdesc='Speech synthesizer based on the concatenation of diphones.'
 arch=('x86_64')
 url='https://github.com/numediart/MBROLA'
@@ -20,6 +20,7 @@ build() {
 }
 
 package() {
-    install -Dm 755 "en1?raw=true" "${pkgdir}/usr/share/mbrola/en1/en1"
+    mkdir -p "${pkgdir}/usr/share/mbrola/en1/"
+    mv "en1?raw=true" "${pkgdir}/usr/share/mbrola/en1/en1"
     install -Dm 755 "${src_name}/Bin/mbrola" "${pkgdir}/usr/bin/mbrola"
 }
